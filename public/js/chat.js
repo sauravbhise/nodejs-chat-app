@@ -72,7 +72,7 @@ $messageForm.addEventListener("submit", (e) => {
 socket.on("locationMessage", (location) => {
   console.log(location);
   const html = Mustache.render(locationMessageTemplate, {
-    username: message.username,
+    username: location.username,
     url: location.url,
     createdAt: moment(location.createdAt).format("h:mm a"),
   });
